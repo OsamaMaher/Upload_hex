@@ -5,7 +5,7 @@ class FileHandling():
     def __init__(self) -> None:
         self.filename = gd.filename
         self.lines_countA = 0
-        self.lines_countB = 0
+        # self.lines_countB = 0
         self.update_exist = False
         print("inside init")
         self.num_of_lines()
@@ -16,13 +16,13 @@ class FileHandling():
     def num_of_lines(self):
         # empty the list
         gd.file_list[0].clear()
-        gd.file_list[1].clear()
+        # gd.file_list[1].clear()
         
         try: # if there is a file -> read it
             self.file = open(self.filename,'rt')
             while  True :
                 line = self.file.readline()
-                if line[0] != '*':
+                if line[0] != '':
                     # store in list
                     gd.file_list[0].append(line)
                     self.lines_countA = self.lines_countA + 1
@@ -30,15 +30,15 @@ class FileHandling():
                 else:
                     break
 
-            while True:
-                line = self.file.readline()
-                if line != '':
-                    # store in list
-                    gd.file_list[1].append(line)
-                    self.lines_countB = self.lines_countB + 1
+            # while True:
+            #     line = self.file.readline()
+            #     if line != '':
+            #         # store in list
+            #         gd.file_list[1].append(line)
+            #         self.lines_countB = self.lines_countB + 1
 
-                else:
-                    break
+            #     else:
+            #         break
             self.update_exist = True
             
         except: # if there is no files -> update_exist = False
@@ -46,7 +46,7 @@ class FileHandling():
         # store number of line in bankA inside lines count 
         gd.lines_count = self.lines_countA
         print(f'lines count = {gd.lines_count}')
-        print(f'lines count = {self.lines_countB}')
+        # print(f'lines count = {self.lines_countB}')
         
 
 

@@ -13,19 +13,19 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/api/hasUpdate/')
-def check_on_updates():
-    # call readfile 0: no files   1: update exists
-    hex_file = FileHandling()
-    print("app1")
-    update_status = hex_file.Is_Update_Exist()
-    print("app2")
-    # if there is an update -> 'y
-    if update_status == True:
-        return 'y'
-    # if no updates -> 'n'
-    else:
-        return 'n'
+# @app.route('/api/hasUpdate/')
+# def check_on_updates():
+#     # call readfile 0: no files   1: update exists
+#     hex_file = FileHandling()
+#     print("app1")
+#     update_status = hex_file.Is_Update_Exist()
+#     print("app2")
+#     # if there is an update -> 'y
+#     if update_status == True:
+#         return 'y'
+#     # if no updates -> 'n'
+#     else:
+#         return 'n'
 
 
 
@@ -96,7 +96,7 @@ def read_file():
         # # remove file after ending
         # # os.remove(f.filename)
         # print(f.filename)
-        # FileHandling()
+        FileHandling()
 
         print("uploaded")
         return redirect("/")
