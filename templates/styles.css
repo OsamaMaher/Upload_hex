@@ -1,0 +1,39 @@
+body {
+    background-color: #C2DEDC;
+    min-height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(198, 1%, 29%);
+    font-family: "Architects Daughter", cursive;
+    text-align: center;
+    font-size: 130%;
+}
+
+.my-form {
+    align-items: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    width: 500px;
+}
+
+input::file-selector-button {
+    background-color: #FFAAC9;
+    background-position-x: 0%;
+  background-size: 200%;
+  border: 0;
+  border-radius: 8px;
+  color: #0000;
+  padding: 1rem 1.25rem;
+  text-shadow: 0 1px 1px #333;
+  transition: all 0.25s;
+  }
+
+input::file-selector-button:hover {
+background-position-x: 100%;
+transform: scale(0.9);
+}

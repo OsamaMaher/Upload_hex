@@ -96,7 +96,7 @@ def read_file():
         # # remove file after ending
         # # os.remove(f.filename)
         # print(f.filename)
-        FileHandling()
+        # FileHandling()
 
         print("uploaded")
         return redirect("/")
